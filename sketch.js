@@ -11,11 +11,11 @@ function preload() {
 
     jerryImg = loadAnimation("mouse1.png");
 
-    jerryImage4 = loadAnimation("mouse4.png");
+    jerryImg4 = loadAnimation("mouse4.png");
 
     jerry_run = loadAnimation("mouse2.png", "mouse3.png");
 
-    tomImg1 = loadAnimation("cat1.png");
+    tomImg = loadAnimation("cat1.png");
 
     tomImg4 = loadAnimation("cat4.png");
 
@@ -31,7 +31,7 @@ function setup(){
     ground.scale = 0.7;
 
     tom = createSprite(500, 340, 20, 100);
-    tom.addAnimation("tomImg1", tomImg1);
+    tom.addAnimation("tomImg1", tomImg);
     tom.scale = 0.1;
 
     jerry = createSprite(200, 340, 10, 40);
@@ -52,7 +52,7 @@ if (tom.x - jerry.x < tom.width / 2 - jerry.width / 2) {
        tom.changeAnimation("tomImg4");
        tom.x = 300;
 
-       jerry.addAnimation("jerryImage4", jerryImage4);
+       jerry.addAnimation("jerryImage4", jerryImg4);
        jerry.changeAnimation("jerryImage4");
        tom.bounce(jerry);
     }
