@@ -1,4 +1,4 @@
-var ground, groundImg;
+var garden, gardenImg;
 
 var jerry, jerry_run;
 
@@ -7,7 +7,7 @@ var tom, tom_running;
 function preload() {
     //load the images here
 
-    groundImg = loadImage("garden.png");
+    gardenImg = loadImage("garden.png");
 
     jerryImg = loadAnimation("mouse1.png");
 
@@ -27,7 +27,7 @@ function setup(){
     createCanvas(680,400);
     
     ground = createSprite(340, 200);
-    ground.addImage("groundImg", groundImg);
+    ground.addImage("groundImg", gardenImg);
     ground.scale = 0.7;
 
     tom = createSprite(500, 340, 20, 100);
